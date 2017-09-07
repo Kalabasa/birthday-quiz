@@ -104,8 +104,7 @@ export class AppComponent implements OnInit {
 	static questionTemplates: any[] = AppComponent.initQuestionTemplates();
 	
 	answers: Subject<QuestionChoice|null>[] = AppComponent.questionTemplates.map(_ => new BehaviorSubject(null));
-	questions: Observable<Question>[] = AppComponent.questionTemplates.map(x =>
-		this.generateQuestion(x));
+	questions: Observable<Question>[] = AppComponent.questionTemplates.map(x => this.generateQuestion(x));
 
 	result: Observable<number>;
 
