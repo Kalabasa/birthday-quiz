@@ -1,0 +1,8 @@
+<div class="question">
+  <h1>{{question.text}}</h1>
+  <md-radio-group class="choices" (change)="onAnswer($event)">
+    <md-radio-button class="choice" *ngFor="let choice of question.choices; let i = index" value="{{i}}">
+      {{choice.text ? choice.text : choice.value}}
+    </md-radio-button>
+  </md-radio-group>
+</div>

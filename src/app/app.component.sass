@@ -1,0 +1,49 @@
+app-root
+	display: flex
+	flex-flow: column nowrap
+	height: 100vh
+
+#app-container
+	flex: 1 0 auto
+	display: flex
+	align-items: center
+
+#app-content
+	flex: 1 0 auto
+	margin: 2em auto
+	margin-bottom: 3rem
+	max-width: 40rem
+
+.mat-tab-header
+	display: none !important
+
+.wrong
+	color: #cc0000
+	font-weight: bold
+	max-height: 1rem
+	overflow: hidden
+	&.hidden
+		max-height: 0
+	transition: max-height 0.2s
+
+#btn-next
+	position: absolute
+	z-index: 100
+	right: 1rem
+	bottom: 0
+	transform: translate(0, 50%)
+	&.hidden
+		visibility: hidden
+		opacity: 0
+
+.share-button-container
+	text-align: center
+	margin-top: 1rem
+
+button.share-button
+	margin: 0.5rem
+	color: white
+	&.sb-facebook
+		background-color: #3B5998
+	&.sb-twitter
+		background-color: #1DA1F2

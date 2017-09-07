@@ -1,0 +1,27 @@
+@mixin column-count($x)
+	-webkit-column-count: $x
+	-moz-column-count: $x
+	column-count: $x
+
+@mixin column-gap($x)
+	-webkit-column-gap: $x
+	-moz-column-gap: $x
+	column-gap: $x
+
+.question
+	padding-top: 1em
+
+	.choices
+		display: inline-block
+		@include column-gap(2em)
+		margin: 1em
+
+		@media (min-width: 20rem)
+			@include column-count(2)
+
+		@media (min-width: 40rem)
+			@include column-count(4)
+
+	.choice
+		display: block
+		padding: 0.5em
